@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+      crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Book Now</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="ocean blue">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo" style="font-family: 'Lobster'">Bon Voyage</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#search">Search</a>
+              </li>
+              <li>
+                <a href="#popular">Popular Places</a>
+              </li>
+              <li>
+                <a href="#gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="myslides fade">
+              <div><img src="promo/1.jpg"></div>
+            </div>
+            <div class="myslides fade">
+              <div><img src="promo/2.jpg" style="width:50%"></div>
+            </div>
+            <div class="myslides fade">
+              <div><img src="promo/3.jpg" style="width:50%"></div>
+            </div>
+            <div class="myslides fade">
+              <div><img src="promo/4.png" style="width:50%"></div>
+            </div>
+          <div class="do" style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+            <span class="dots" onclick="currentSlide(4)"></span>
+            </div>
+          </div>
+          <div class="container">
+              <div class="col s12 m6">
+                <h5 class="w">Where would you like to go?</h5>
+                <div class="nav_bar">
+                  <ul>
+                    <li><a href="Round Trip.html">Round-trip</a></li>
+                    <li><a href="One Way.html">One Way</a></li>
+                    <li><a href="Multi City.html">Multi_City</a></li>
+                  </ul>
+                </div>
+                <div class="main_container">
+                  <p>This is Fourth page</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+        </section>
+
+
+
+
+
+    <footer class="section blue darken-2 white-text center">
+      <p class="flow-text"style="font-family: 'Lobster'">Bon Voyage &copy; 2020 </p>
+    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+   <script type="text/javascript">
+     var slideIndex = 1;
+     showSlide(slideIndex);
+     function plusSlides(n){
+       showSlide(slideIndex += n);
+     }
+     function currentSlide(n) {
+       showSlide(slideIndex = n);
+     }
+     function showSlide(n){
+       var i;
+       var slides = document.getElementsByClassName("myslides");
+       var dots = document.getElementsByClassName("dots");
+       if (n > slides.length) { slideIndex = 1};
+       if (n < 1) { slideIndex = slides.length};
+       for (i=0;i<slides.length;i++) {
+         slides[i].style.display = "none";
+       };
+       for (i=0;i<dots.length;i++) {
+         dots[i].className = dots[i].className.replace(" active","");
+       };
+       slides[slideIndex-1].style.display = "block";
+       dots[slideIndex-1].className += " active";
+     }
+</script>
+  </body>
+</html>
